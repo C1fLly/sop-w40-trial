@@ -1,0 +1,10 @@
+# 试验：普通的 pull_request 检查，不受这次改动影响
+name: check-pr
+on:
+  pull_request:
+jobs:
+  fast:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: echo "check-pr ran"

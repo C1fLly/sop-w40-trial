@@ -1,0 +1,12 @@
+# 试验：要放开的那个（模拟守门检查）
+name: guard
+on:
+  pull_request_target:
+permissions:
+  contents: read
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: echo "guard ran event=${{ github.event_name }} action=${{ github.event.action }}"

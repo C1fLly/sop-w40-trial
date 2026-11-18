@@ -1,0 +1,12 @@
+# 试验：对照，同样用 pull_request_target，但不放开
+name: other-target
+on:
+  pull_request_target:
+permissions:
+  contents: read
+jobs:
+  other:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - run: echo "other-target ran"
